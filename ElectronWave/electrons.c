@@ -90,4 +90,7 @@ void electrons()
     gStyle->SetPalette(1);
     AmpTwo->SetTitle("Amplitude");
     AmpTwo->Draw("surf1");
+
+    c3->Print("wavefunction.png");
+    c4->Print("amplitude.png");
 }
