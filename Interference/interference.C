@@ -14,7 +14,7 @@ void interference()
     {
     	
     	float first = sin(2*i);
-    	float second = -sin(i*i);
+    	float second = -sin(2*i);
     	
         wave1->SetPoint(wave1->GetN(), i, first);
         wave2->SetPoint(wave2->GetN(), i, second);
