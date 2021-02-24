@@ -2,17 +2,24 @@
 
 void interference()
 {
+
+    float pi = TMath::Pi();
+
     TGraph *wave1 = new TGraph();
     TGraph *wave2 = new TGraph();
 
     TGraph *waveCombined = new TGraph();
 
-    for (int i = 0; i < 2 * TMath::Pi(); i+= 0.1)
+    for (float i = 0; i < 2 * pi; i+= 0.1)
     {
-        wave1->SetPoint(wave1->GetN(), i, sin(i));
-        wave2->SetPoint(wave2->GetN(), i, cos(i));
+    	
+    	float first = sin(2*i);
+    	float second = -sin(i*i);
+    	
+        wave1->SetPoint(wave1->GetN(), i, first);
+        wave2->SetPoint(wave2->GetN(), i, second);
 
-        waveCombined->SetPoint(waveCombined->GetN(), i,  sin(i) + cos(i));
+        waveCombined->SetPoint(waveCombined->GetN(), i,  first + second);
     }
 
     TCanvas *c1 = new TCanvas();
