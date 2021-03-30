@@ -22,7 +22,6 @@ void DoubleSlit()
 	TCanvas *c1 = new TCanvas();
 	bothSlitsOpen->SetTitle("Electron Position when both slits are open");
 	bothSlitsOpen->Draw("A*");
-	//interference->Draw();
 
 
 }	
