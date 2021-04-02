@@ -26,7 +26,7 @@ void h()
 
     TGraph *gr = new TGraph();
 
-    TH2F *hist = new TH2F("Hist", "Hist", 1000, -15, 15, 1000, -15, 15);
+    TH2F *hist = new TH2F("Hydrogen Atom", "H", 1000, -15, 15, 1000, -15, 15);
 
     int count = 1;
 
@@ -46,7 +46,7 @@ void h()
             hist->Fill(i, j, WaveFunction(i, j));
         }
     }
-    TCanvas *c1 = new TCanvas();
+    TCanvas *c1 = new TCanvas("c1", "Schrödinger's Hydrogen Atom", 700, 700);
     hist->Draw("colz");
     //g->Draw("surf1");
 
