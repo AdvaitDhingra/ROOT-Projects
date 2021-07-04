@@ -30,6 +30,8 @@ void h()
 
     TCanvas *c2 = new TCanvas("c2", "Schrödinger's Hydrogen Atom 3D", 700, 700);
     g->Draw("surf1");
+    
+    c1->Print("h.png");
 
 }
 
